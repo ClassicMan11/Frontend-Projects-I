@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Consolas';
+}
+body{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+body::before{
+    content: '';
+    position: absolute;
+    filter: blur(5px);
+    top: -100px;
+    left: -100px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #2cd8d5 0%, #6b8dd6 50%, #8e37d7 100%);
+    background-blend-mode: normal;
+    animation: grow 10s ease-in-out infinite;
+    animation: animate grow 10s ease-in-out infinite;
+}
+body::after{
+    content: '';
+    position: absolute;
+    filter: blur(5px);
+    bottom: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #2cd8d5 0%, #6b8dd6 50%, #8e37d7 100%);
+    background-blend-mode: normal;
+    animation: grow 10s ease-in-out infinite;
+    animation: animate grow 10s ease-in-out infinite;
+}
+@keyframes grow {
+    0%{
+      background: linear-gradient(180deg, #2cd8d5 0%, #6b8dd6 50%, #8e37d7 100%);
+      transform: scale(1);
+    }
+    50%{
+      background: linear-gradient(180deg, #005bea 0%, #00c6fb 100%);
+      background-blend-mode: normal;
+      transform: scale(1.3);
+    }
+    100%{
+      background: linear-gradient(180deg, #16a068 0%, #f4e83f 100%);
+      background-blend-mode: normal;
+      transform: scale(1);
+    }
+}
+@keyframes animate {
+    0%{
+        background: linear-gradient(180deg, #2cd8d5 0%, #6b8dd6 50%, #8e37d7 100%);
+        background-blend-mode: normal;
+    }
+    50%{
+        background: linear-gradient(180deg, #005bea 0%, #00c6fb 100%);
+        background-blend-mode: normal;
+        color: #005cea;
+    }
+    100%{
+        background: linear-gradient(180deg, #16a068 0%, #f4e83f 100%);
+        background-blend-mode: normal;
+        color: #e7e441;
+    }
+}
+form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 600px;
+    background: linear-gradient(180deg, #2cd8d5 0%, #6b8dd6 50%, #8e37d7 100%);
+    opacity: 0.7;
+    backdrop-filter: blur(3px);
+    background-blend-mode: normal;
+    padding: 40px;
+    border-radius: 20px;
+    z-index: 10;
+    animation: animate 10s ease-in-out infinite;
+}
+form h1{
+    font-size: 3rem;
+    font-weight: 900;
+    text-decoration: underline;
+    color: #fff;
+}
+form ::placeholder{
+    color: hsla(0, 0%, 25%, 0.5);
+}
+form label{
+    font-size: 18px;
+    font-weight: 600;
+    color: #f3f3f3;
+}
+form input{
+    position: relative;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+    width: 100%;
+    height: 3.2rem;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+form div{
+    margin-top: 20px;
+}
+form span{
+    display: flex;
+}
+form span h2{
+  position: absolute;
+  right: 50px;
+}
+form button{
+    margin-left: 50%;
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    color: #36cdd5;
+    font-size: 26px;
+    font-weight: 800;
+    background: linear-gradient(180deg, #2cd8d5 0%, #6b8dd6 50%, #8e37d7 100%);
+    background-blend-mode: normal;
+    transition: all 0.5s ease;
+    animation: animate 10s ease-in-out infinite;
+}
+form button:hover{
+    color: #fff;
+    transform: scaleX(1.1);
+}
+form p{
+    color: #f3f3f3;
+}
+form a{
+    text-decoration: underline;
+    color: hsl(197, 71%, 73%);
+}
+form a:hover{
+    color: hsl(197, 71%, 90%);
+}
+
+@media (max-width: 600px){
+    body::before{
+        content: '';
+        position: absolute;
+        filter: blur(5px);
+        top: -100px;
+        left: -100px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #2cd8d5 0%, #6b8dd6 50%, #8e37d7 100%);
+        background-blend-mode: normal;
+    }
+    body::after{
+        content: '';
+        position: absolute;
+        filter: blur(5px);
+        bottom: -100px;
+        right: -100px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #2cd8d5 0%, #6b8dd6 50%, #8e37d7 100%);
+        background-blend-mode: normal;
+    }
+    form{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 550px;
+        background: linear-gradient(180deg, #2cd8d5 0%, #6b8dd6 50%, #8e37d7 100%);
+        background-blend-mode: normal;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    form h1{
+        font-size: 3rem;
+        font-weight: 900;
+        text-decoration: underline;
+        color: #fff;
+    }
+    form ::placeholder{
+        color: hsla(0, 0%, 25%, 0.5);
+    }
+    form label{
+        font-size: 18px;
+        font-weight: 600;
+        color: #f3f3f3;
+    }
+    form input{
+        font-size: 1rem;
+        font-weight: 700;
+        color: #333;
+        width: 100%;
+        height: 3.2rem;
+        border-radius: 10px;
+        padding: 10px;
+        outline: none;
+        border: none;
+        margin-top: 5px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+    form button{
+        margin-left: 50%;
+        width: 50%;
+        height: 50px !important;
+        border-radius: 10px;
+        margin-top: 20px;
+        border: none;
+        outline: none;
+        color: #36cdd5;
+        font-size: 26px;
+        font-weight: 800;
+        background: linear-gradient(180deg, #2cd8d5 0%, #6b8dd6 50%, #8e37d7 100%);
+        background-blend-mode: normal;
+        transition: all 0.5s ease;
+    }
+    form button:hover{
+        color: #fff;
+        transform: scaleX(1.1);
+    }
+    form p{
+        font-size: 16px;
+        position: absolute;
+        bottom: 26px;
+        color: #f3f3f3;
+    }
+    form a{
+        text-decoration: underline;
+        color: hsl(197, 71%, 73%);
+    }
+    form a:hover{
+        color: hsl(197, 71%, 90%);
+    }
+    .other .brands{
+        position: absolute;
+        display: flex;
+        bottom: 50px;
+        left: 20px;
+
+    }
+    .other .brands a{
+        width: 50px;
+        height: 50px;
+        background: #f3f3f3;
+        margin: 1px solid;
+        margin: 30px 10px 0 20px;
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 1024px){
+    form{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: 570px;
+        background: linear-gradient(180deg, #2cd8d5 0%, #6b8dd6 50%, #8e37d7 100%);
+        background-blend-mode: normal;
+        padding: 40px;
+        border-radius: 20px;
+    }
+    form h1{
+        font-size: 3rem;
+        font-weight: 900;
+        text-decoration: underline;
+        color: #fff;
+    }
+    form ::placeholder{
+        color: hsla(0, 0%, 25%, 0.5);
+    }
+    form label{
+        font-size: 18px;
+        font-weight: 600;
+        color: #f3f3f3;
+    }
+    form input{
+        position: relative;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #333;
+        width: 100%;
+        height: 3.2rem;
+        border-radius: 10px;
+        padding: 10px;
+        outline: none;
+        border: none;
+        margin-top: 5px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+    form div{
+        margin-top: 20px;
+    }
+    form button{
+        margin-left: 50%;
+        width: 50%;
+        height: 50px;
+        border-radius: 10px;
+        margin-top: 20px;
+        border: none;
+        outline: none;
+        color: #36cdd5;
+        font-size: 26px;
+        font-weight: 800;
+        background: linear-gradient(180deg, #2cd8d5 0%, #6b8dd6 50%, #8e37d7 100%);
+        background-blend-mode: normal;
+        transition: all 0.5s ease;
+    }
+    form button:hover{
+        color: #fff;
+        transform: scaleX(1.1);
+    }
+    form p{
+        position: absolute;
+        bottom: 26px;
+        color: #f3f3f3;
+    }
+    form a{
+        text-decoration: underline;
+        color: hsl(197, 71%, 73%);
+    }
+    form a:hover{
+        color: hsl(197, 71%, 90%);
+    }
+    .other .brands{
+        position: absolute;
+        display: flex;
+        bottom: 50px;
+        left: 20px;
+
+    }
+    .other .brands a{
+        width: 50px;
+        height: 50px;
+        background: #f3f3f3;
+        margin: 1px solid;
+        margin: 30px 10px 0 20px;
+        border-radius: 5px;
+    }
+}

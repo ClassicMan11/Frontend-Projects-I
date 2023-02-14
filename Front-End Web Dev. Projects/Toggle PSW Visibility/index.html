@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Toggle Password Visibilty</title>
+  </head>
+  <body>
+    <p>Click the radio button to toggle between Password Visibilty</p>
+    <label for="psw">Password:</label>
+    <input type="password" name="psw" placeholder="type in something" id="myInput">
+    <br>
+    <br>
+    <p><input type="checkbox" onclick="myFunction()">Show Password</p>
+
+    <script type="text/javascript">
+      function myFunction(){
+        var x = document.getElementById('myInput');
+        if (x.type === 'text') {
+            x.type = 'password';
+        }
+        else {
+          x.type = 'text';
+        }
+      }
+    </script>
+
+  </body>
+</html>
